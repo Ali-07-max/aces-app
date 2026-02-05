@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ACEs 2.0 — Frequency + Severity (1–10)</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrap">
+
+    <h1>ACEs 2.0 (Frequency + Severity)</h1>
+
+    <p class="sub">
+      Each item: check “Yes” to activate sliders. Sliders are 1–10. Per-item total shows on the right. Overall total at bottom.
+    </p>
+
+    <div id="questions"></div>
+
+    <div class="summary">
+      <div class="sumleft">
+        <div><strong>Overall total</strong> (sum of all item totals)</div>
+        <div class="note">
+          Formula currently: <code>frequency + severity</code> for each “Yes” item.
+          If you want a different formula, change <code>computeItemTotal()</code>.
+        </div>
+      </div>
+      <div class="sumright" id="overallTotal">0</div>
+    </div>
+
+    <div class="btnrow">
+      <button type="button" id="resetBtn">Reset all</button>
+      <button type="button" id="exportBtn">Export JSON</button>
+      <button type="button" id="printBtn">Print</button>
+    </div>
+
+    <pre id="exportOut"
+      style="white-space:pre-wrap; margin-top:12px; display:none; border:1px solid var(--border); padding:10px; border-radius:10px;">
+    </pre>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

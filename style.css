@@ -1,0 +1,119 @@
+:root { --gap: 12px; --border: #d6d6d6; --muted:#666; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 20px;
+  color:#111;
+}
+
+h1 { margin: 0 0 6px 0; font-size: 20px; }
+
+.sub { margin: 0 0 18px 0; color: var(--muted); font-size: 13px; }
+
+.wrap { max-width: 980px; }
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 12px 0;
+  background: #fff;
+}
+
+.qhead {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: var(--gap);
+}
+
+.qtext { font-size: 14px; line-height: 1.35; }
+
+.qnum { font-weight: 700; margin-right: 6px; }
+
+.rightbox { min-width: 160px; text-align:right; }
+
+.totalbadge {
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.row {
+  display:grid;
+  grid-template-columns: 120px 1fr 56px;
+  gap: var(--gap);
+  align-items:center;
+  margin-top: 10px;
+}
+
+.label { color: var(--muted); font-size: 13px; }
+
+input[type="range"] { width: 100%; }
+
+.value {
+  font-variant-numeric: tabular-nums;
+  text-align:right;
+}
+
+.toggle {
+  margin-top: 10px;
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.summary {
+  border: 2px solid #111;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: var(--gap);
+}
+
+.sumleft { font-size: 14px; }
+
+.sumright {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.btnrow {
+  margin-top: 10px;
+  display:flex;
+  gap: 10px;
+  flex-wrap:wrap;
+}
+
+button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+button:hover { background:#efefef; }
+
+.note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height:1.35;
+}
+
+@media (max-width: 760px){
+  .qhead { flex-direction:column; align-items:stretch; }
+  .rightbox { text-align:left; }
+  .row { grid-template-columns: 1fr; }
+  .value { text-align:left; }
+}
